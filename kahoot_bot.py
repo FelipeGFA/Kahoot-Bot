@@ -25,7 +25,7 @@ instancia_cliente_azure = None
 
 try:
     if not AZURE_API_TOKEN:
-        raise ValueError("Variável de ambiente GITHUB_TOKEN não definida.")
+        raise ValueError("Variável de ambiente AZURE_API_TOKEN não definida.")
     instancia_cliente_azure = ChatCompletionsClient(
         endpoint=AZURE_API_ENDPOINT,
         credential=AzureKeyCredential(AZURE_API_TOKEN),
